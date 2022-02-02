@@ -11,23 +11,42 @@
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/style.css" />
         <link rel="stylesheet" href="./styles/home.css" />
-        <title>Document</title>
+        <title>2022 Meal Tracker</title>
     </head>
 
     <body>
-        <header>
-            <div class="gutter-right logo">
-                <img src="./assets/big-logo.png" />
-            </div>
-        </header>
         <main>
+            <header><h1>2022 Meal Tracker: February</h1></header>
             <section class="main-section">
-                <img class="main-logo" src="./assets/alchemy-logo.png" />
-                <h2>Meal Tracker</h2>
+                <h3>Add Food Item</h3>
+                <form id="meal-form">
+                    <label>
+                        Food Name:
+                        <input name="food-item" />
+                    </label>
+                    <label>
+                        Quantity:
+                        <input name="quantity" type="number" />
+                    </label>
+                    <label>
+                        Ingredient:
+                        <input name="ingredient" type="text" />
+                    </label>
+                    <button>Submit</button>
+                </form>
+                <div class="meal-list">
+                    <ul id="meal-list"></ul>
+                    <button id="remove">Remove Last Item</button>
+                </div>
+            </section>
+            <section>
+                <h3>Save Meal</h3>
+                <ul id="save-meal"></ul>
+                <button id="save">Save Meal</button>
             </section>
         </main>
         <footer>
-            <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+            <div class="copy gutter-right">2022 Alchemy Code Lab-Kamie Short</div>
         </footer>
 
         <script type="module" src="./app.js"></script>

@@ -36,9 +36,9 @@ save meal button
 ## State
 
 ingredient and meal array of objects
-{name: 'Burrito', quantity: 1, ingredients: 'rice', 'beans', 'veggies', calories: 400}
+FOOD ITEM {name: 'Burrito', quantity: 1, ingredients: 'rice', 'beans', 'veggies', calories: 400}
 
-{name: 'dinner', time: '5:00PM', daily calories remaining: 200}
+MEAL {name: 'dinner', time: '5:00PM'}
 
 ## Order of Operations
 

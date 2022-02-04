@@ -18,11 +18,10 @@
         <main>
             <header><h1>2022 Meal Tracker: February</h1></header>
             <section class="main-section">
-                <h3>Add Food Item</h3>
                 <form id="meal-form">
                     <label>
                         Food Name:
-                        <input name="food-item" />
+                        <input name="food-item" type="text" />
                     </label>
                     <label>
                         Quantity:
@@ -32,7 +31,7 @@
                         Ingredient:
                         <input name="ingredient" type="text" />
                     </label>
-                    <button>Submit</button>
+                    <button>Add Food Item</button>
                 </form>
                 <div class="meal-list">
                     <ul id="meal-list"></ul>
@@ -42,7 +41,7 @@
             <section>
                 <h3>Save Meal</h3>
                 <ul id="save-meal"></ul>
-                <button id="save">Save Meal</button>
+                <button id="save-button">Save Meal</button>
             </section>
         </main>
         <footer>

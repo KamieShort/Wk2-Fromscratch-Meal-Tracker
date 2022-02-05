@@ -44,12 +44,13 @@ MEAL {name: 'dinner', time: '5:00PM'}
 
 html
 grab dom elements
+set state-array
 add form event listener -validate using console.log
 test <li render function
 create first array variable
 push form data to ingredients array
 add <ul to HTML
-add rendIngredients function and loop through all ingredients, create an LI and render
+add renderIngredients function and loop through all ingredients, create an li and render
 
 Remove last item
 add button
@@ -59,6 +60,7 @@ render
 Save Meal Function
 add the input and button to html
 add the event listener, validate using console.log
+write render function in utils.
 test <li render function
 create second array
 add <ul to HTML

@@ -4,7 +4,8 @@ import { renderMeal, renderSaveLi } from './utils.js';
 const mealFormEl = document.getElementById('meal-form');
 const mealListEl = document.getElementById('meal-list');
 const removeEl = document.getElementById('remove');
-const saveEl = document.getElementById('save-input');
+const saveListEl = document.getElementById('save-meal');
+const saveInputEl = document.getElementById('save-input');
 const saveButtonEl = document.getElementById('save-button');
 
 // let state
@@ -21,10 +22,10 @@ function renderList() {
 }
 
 function renderSave() {
-    saveEl.textContent = '';
+    saveListEl.textContent = '';
     for (let save of saves) {
         const li = renderSaveLi(save);
-        saveEl.append(li);
+        saveListEl.append(li);
     }
 }
 
@@ -35,7 +36,7 @@ mealFormEl.addEventListener('submit', (e) => {
 
     const meal = {
         name: formData.get('food-item'),
-        quantity: Number(formData.get('quantity')),
+        day: formData.get('day'),
         ingredient: formData.get('ingredient'),
     };
     meals.push(meal);
@@ -49,8 +50,8 @@ removeEl.addEventListener('click', () => {
 });
 
 saveButtonEl.addEventListener('click', () => {
-    const input = saveEl.value;
-    const count = saves.length;
+    const input = saveInputEl.value;
+    const count = meals.length;
     // saveEl.textContent = '';
     saves.push({ input, count });
     renderSave();

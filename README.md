@@ -1,25 +1,69 @@
-## The Golden Rule: 
+# The Meal Tracker Plan
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+REMEMBER: If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+## HTML
 
-## Making a plan
+Add ingredient feature -<form
+use <label, <inputs, <buttons
 
-1) **Make a drawing of your app. Simple "wireframes"**
-1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
-1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+<ul for listing ingredients
+Remove feature
+<remove button
 
-Additional considerations:
-- Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
-  - What needs to live in a persistence layer?
-- Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+Save Feature
+<save button
+<input for meal
+
+<ul to list the meals
+
+## Events
+
+form submit
+-make new formData object to access form data
+-make ingredient object
+-render ingredients <ul
+
+remove button
+-.pop last ingredient from list
+-render ingredients <ul
+
+save meal button
+-grab meal name from <input
+-make meal object
+-render meals
+
+## State
+
+ingredient and meal array of objects
+FOOD ITEM {name: 'Burrito', quantity: 1, ingredients: 'rice', 'beans', 'veggies', calories: 400}
+
+MEAL {name: 'dinner', time: '5:00PM'}
+
+## Order of Operations
+
+html
+grab dom elements
+set state-array
+add form event listener -validate using console.log
+test <li render function
+create first array variable
+push form data to ingredients array
+add <ul to HTML
+add renderIngredients function and loop through all ingredients, create an li and render
+
+Remove last item
+add button
+add event listener
+.pop last item
+render
+Save Meal Function
+add the input and button to html
+add the event listener, validate using console.log
+write render function in utils.
+test <li render function
+create second array
+add <ul to HTML
+add renderMeals function, loop through meals, create <li, render
+reset ingredients
+render ingredients

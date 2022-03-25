@@ -1,1 +1,8 @@
-/* add home page styles here */
+#meal-form {
+    display: flex;
+    flex-direction: column;
+}
+.main-section {
+    display: flex;
+    flex-direction: row;
+}
